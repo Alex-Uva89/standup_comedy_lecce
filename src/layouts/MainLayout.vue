@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
     <q-page-container>
-      <q-header elevated class="bg-black">
+      <q-header elevated>
         <LogoHeader />
         <main-navbar class="q-mb-md md:q-mb-xs" />
       </q-header>
@@ -23,6 +23,11 @@ import MainNavbar from 'src/components/MainNavbar.vue';
 </script>
 
 <style scoped>
+
+.q-layout__section--marginal {
+  background-color: black; /* default: smartphone */
+}
+
 .page-wrapper {
   position: relative;
   overflow: hidden;
@@ -51,5 +56,11 @@ import MainNavbar from 'src/components/MainNavbar.vue';
 .slide-over-leave-to {
   width: 0%;
   transform: translateX(0%);
+}
+
+@media (min-width: 600px) {
+  .q-layout__section--marginal {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 </style>
