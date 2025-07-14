@@ -1,14 +1,6 @@
-[build]
-  publish = "dist/spa"
-
 [[plugins]]
   package = "netlify-plugin-prerender-spa"
 
   [plugins.inputs]
-  # Le rotte da prerenderizzare:
-  routes = [
-    "/", 
-    "/about", 
-    "/products", 
-    "/products/abc"
-  ]
+    source = "dist"
+
