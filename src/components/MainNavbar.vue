@@ -1,5 +1,5 @@
 <template>
-  <q-toolbar class="bg-yellow-7 text-dark justify-center toolbar">
+  <q-toolbar class="text-dark justify-center toolbar">
     <q-btn flat label="Home" to="/" />
     <q-btn flat label="About" to="/about" />
     <q-btn flat label="Contact" to="/contact" />
@@ -10,6 +10,7 @@
 
 .toolbar{
     height: 50px;
+    background-color: var(--primary);
 }
 
 </style>

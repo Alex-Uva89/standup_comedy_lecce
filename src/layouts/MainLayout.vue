@@ -31,6 +31,7 @@ import MainNavbar from 'src/components/MainNavbar.vue';
 .page-wrapper {
   position: relative;
   overflow: hidden;
+  height: calc(100vh -250px);
 }
 
 .slide-over-enter-active,

@@ -1,17 +1,29 @@
 <template>
   <div class="q-pa-md flex flex-center">
-    <h1 class="text-h4 text-bold text-yellow">My Logo</h1>
+    <q-img
+      v-if="logoUrl"
+      :src="logoUrl"
+      alt="Logo"
+      style="max-width: 200px; max-height: 100px"
+      spinner-color="yellow"
+      fit="contain"
+    />
   </div>
 </template>
 
 <script setup>
-// Nessuna logica per ora
+import { ref, onMounted } from 'vue'
+import client, { urlFor } from 'src/sanityClient'
+
+const logoUrl = ref(null)
+
+onMounted(async () => {
+  const data = await client.fetch(`*[_type == "sito"][0]{
+    logo
+  }`)
+  if (data?.logo) {
+    logoUrl.value = urlFor(data.logo).width(200).url()
+  }
+})
 </script>
 
-<style scoped>
-
-div{
-    height: 100px;
-}
-
-</style>

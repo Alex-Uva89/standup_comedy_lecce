@@ -97,7 +97,7 @@ function getCardClass(index) {
 
 .card-no-full {
   width: 100%;
-  height: 200px; /* Altezza base delle card su mobile */
+  height: 200px;
   cursor: pointer;
   transition: all 0.5s ease;
   overflow: hidden;
@@ -147,19 +147,19 @@ function getCardClass(index) {
 
     .card-no-full {
         width: calc(100% / 4 - 5px);
-        height: calc(100vh - 200px);
+        height: calc(100vh - 250px);
         cursor: pointer;
         transition: all 0.5s ease;
-    }
-
-    .card-full {
-      width: 100%;
-      height: calc(100vh - 200px);
-      cursor: pointer;
-      transition: all 0.5s ease;
-      z-index: 1;
-      position: relative;
-    }
+      }
+      
+      .card-full {
+        width: 100%;
+        height: calc(100vh - 250px);
+        cursor: pointer;
+        transition: all 0.5s ease;
+        z-index: 1;
+        position: relative;
+      }
 
     .card-no-full {
       margin-right: 5px;
@@ -172,7 +172,7 @@ function getCardClass(index) {
     .card-hidden {
       width: 0;
       opacity: 0;
-      height: 100vh;
+      height: 0;
       pointer-events: none;
       transition: all 0.5s ease;
     }
