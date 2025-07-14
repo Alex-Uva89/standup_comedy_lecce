@@ -1,6 +1,11 @@
+[build]
+  command = "quasar build"
+  publish = "dist/spa"
+
 [[plugins]]
   package = "netlify-plugin-prerender-spa"
 
   [plugins.inputs]
-    source = "dist"
+    source = "dist/spa"
+
 
